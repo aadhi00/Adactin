@@ -1,6 +1,6 @@
 @f2
 Feature: Verify booking functionality of Adactin
-
+	@booking
   Scenario Outline: Verify user can login to Adactin Home
     Given User is on Adactin Page
     When User enters "<username>" and "<password>"
@@ -33,7 +33,8 @@ Feature: Verify booking functionality of Adactin
     When User selects the Hotel
     And clicks the continue button
     Then User should be redirected to the Book A Hotel page
-
+    
+	@order
   Scenario Outline: Payment Details
     Given User is in the Book A Hotel Page
     When User fills the "<firstname>" and "<lastname>"

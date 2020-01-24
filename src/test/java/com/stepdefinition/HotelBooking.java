@@ -13,8 +13,6 @@ public class HotelBooking extends LibGlobal{
 	public static PageObjectManager pom;
 	@Given("User is on Adactin Page")
 	public void user_is_on_Adactin_Page() throws MalformedURLException {
-		set();
-		//setCloud();
 		launch("https://www.adactin.com/HotelApp/index.php");
 	}
 	@When("User enters {string} and {string}")
@@ -185,6 +183,4 @@ public class HotelBooking extends LibGlobal{
 		   System.out.println("->Booking confirmed");
 		 System.out.println("Order ID: "+text);
 	}
-
-
 }
