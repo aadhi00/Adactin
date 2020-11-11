@@ -10,9 +10,9 @@ import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = "src/test/resources/features/", glue = { "com.stepdefinition" },
-plugin = {"json:src/test/resources/reports/Report.json" },
-				dryRun = false, strict = true, monochrome = true)
+@CucumberOptions(features = "src/test/resources/features/Login.feature", glue = { "com.stepdefinition" },
+plugin = {"json:src/test/resources/reports/Report.json" ,"rerun:src/test/resources/failed/failed.txt"}
+	,			dryRun = false, strict = true, monochrome = true)
 public class TestRunner extends LibGlobal{
 
 	@AfterClass
